@@ -20,6 +20,23 @@
       font-family: sans-serif;
       text-align: center;
       overflow-x: hidden;
+      position: relative; 
+    }
+
+   
+    .side-rose {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 120px; 
+      height: auto;
+      opacity: 0.8;
+    }
+    .side-rose-left {
+      left: 0;
+    }
+    .side-rose-right {
+      right: 0;
     }
 
     h1 {
@@ -82,7 +99,7 @@
     .photo-gallery img,
     .photo-gallery video {
       width: 250px;
-      height: 500px;
+      height: 500px; 
       object-fit: cover;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
@@ -90,12 +107,18 @@
   </style>
 </head>
 <body>
+  <img src="rose.jpg" alt="Rose Left" class="side-rose side-rose-left">
+  <img src="rose.jpg" alt="Rose Right" class="side-rose side-rose-right">
 
   <h1>Happy Birthday MONTH, Sweetheart!</h1>
   <p>To my beautiful girl, happy birthday month!,
      you deserve the world and more. Enjoy your day!</p>
 
-  <p class="birthday-msg">You're my sunshine, my word, and the reason I'm always happy. I'm so lucky to call you mine. Here's to your day, today and always. Yene Konjo, Ewedshalew! 💖</p>
+  <p class="birthday-msg">
+    You're my sunshine, my word, and the reason I'm always happy. 
+    I'm so lucky to call you mine. Here's to your day, today and always. 
+    Yene Konjo, Ewedshalew! 💖
+  </p>
 
   <div class="photo-gallery">
     <img src="img.JPEG" alt="Photo 1">
@@ -131,7 +154,9 @@
     }
 
     setInterval(() => {
-      for (let i = 0; i < 4; i++) createConfetti();
+      for (let i = 0; i < 4; i++) {
+        createConfetti();
+      }
     }, 300);
 
     function burstConfetti() {
